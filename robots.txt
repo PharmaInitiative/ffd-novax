@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /css
+Disallow: /js
+Sitemap: https://slyoza.com.ua/sitemap-ua.xml
+Sitemap: https://slyoza.com.ua/sitemap-ru.xml

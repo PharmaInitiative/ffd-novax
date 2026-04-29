@@ -1,0 +1,123 @@
+.novaxclub_head_section, .novaxclub_head_holder{
+  position: relative;
+  
+}
+.novaxclub_head_section{
+  margin-top: 50px;
+}
+.novaxclub_head_bg{
+  width: 100%;
+  height: 420px;
+  /*max-height: 420px;*/
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 84%;
+     object-position: 20% 84%;
+}
+.novaxclub_head_header{
+  position: absolute;
+  right: 68%;
+  width: calc(50% - 50px);
+  top: 50%;
+  text-align: right;
+  -webkit-transform: translateY(-41%);
+          transform: translateY(-41%);
+  color: #00547F;
+  font-size: 48px;
+}
+.novaxclub_text_container{
+  position: relative;
+  margin: 0 auto;
+  max-width: 850px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.novaxclub_section{
+  margin: 50px 0 75px;
+}
+.novaxclub_header{
+  color: #00547F;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.novaxclub_sections_header{
+  text-align: center;
+  font-size: 19px;
+  margin: 50px auto 25px;
+  max-width: 780px;
+}
+.novaxclub_text{
+  max-width: 800px;
+  margin: 0 auto;
+  color: #4D4D4D;
+  font-size: 19px;
+  font-weight: 300;
+}
+.novaxclub_text p{
+  margin: 15px 0 0 ;
+  padding: 0;
+}
+.novaxclub_text a{
+  color: #00547F!important;
+  font-weight: 700;
+  text-decoration: none;
+}
+.novaxclub_text ul{
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+.novaxclub_text ul>li:before{
+  content: "\2022";
+  color: #F07E20;
+  font-weight: bold;
+  display: inline-block; 
+  width: .8em;
+}
+@media all and (max-width: 1200px){
+    .novaxclub_head_header {
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+}
+@media all and (max-width: 990px){
+  .novaxclub_head_bg{
+    -o-object-position: 50% 84%;
+       object-position: 50% 84%;
+  }
+  .novaxclub_head_header {
+    top: 60%;
+    right: 60%;
+  }
+}
+@media all and (max-width: 767px){
+  .novaxclub_head_bg{
+    height: unset;
+    width: 100%;
+  }
+  .novaxclub_head_header{
+    color: #00547F;
+    width: calc(100% - 30px);
+    position: relative;
+    left: 15px;
+    font-size: 30px;
+    top: 0;
+    -webkit-transform: unset;
+            transform: unset;
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .novaxclub_text{
+    font-size: 16px;
+  }
+  .novaxclub_sections_header{
+    font-size: 18px;
+    margin: 25px 0;
+  }
+  .novaxclub_section{
+    margin: 25px 0;
+  }
+  
+}

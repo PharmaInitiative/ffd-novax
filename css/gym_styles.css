@@ -1,0 +1,687 @@
+.gym_head_section, .gym_head_holder{
+  position: relative;
+  
+}
+.gym_head_section{
+  margin-top: 50px;
+}
+.gym_head_bg{
+  width: 100%;
+  height: 420px;
+  /*max-height: 420px;*/
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 68%;
+     object-position: 20% 68%;
+}
+.gym_head_header{
+  position: absolute;
+  left: 46%;
+  width: calc(50% - 50px);
+  top: 50%;
+  -webkit-transform: translateY(-41%);
+          transform: translateY(-41%);
+  color: #00547F;
+  font-size: 48px;
+}
+.gym_section{
+  font-size: 32px;
+  color: #00547F;
+  padding: 50px 0;
+  position: relative;
+}
+.gym_first_text{
+  position: relative;
+  padding: 50px 0 30px;
+  text-align: center;
+}
+.gym_section.blue{
+  background: #E7F6FD;
+}
+.gym_eye_section_header{
+  text-align: center;
+  margin-top: 40px;
+}
+.gym_eye_number{
+  position: absolute;
+  bottom: 0;
+  left: 75px;
+  -webkit-transform: translate(0%, 18%);
+          transform: translate(0%, 18%);
+  font-size: 200px;
+  font-weight: bold;
+  color: #FFF;
+  line-height: 1;
+}
+.gym_eye_number.low{
+  -webkit-transform: translate(0%, 17%);
+          transform: translate(0%, 17%);
+}
+.gym_eye_number.right{
+  left: unset;
+  right: 75px;
+  color: #E7F6FD;
+}
+.gym_eyes_grid{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+}
+.gym_eyes_grid>div:first-child{
+  text-align: right;
+}
+.gym_eye_holder{
+  position: relative;
+  display: inline-block;
+}
+.gym_eye_sclera{
+  position: relative;
+  width: 380px;
+}
+.gym_eye_sclera.right, 
+.gym_eye_lid.right{
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+.eye_apple_holder, .gym_eye_lid{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.gym_eye_apple{
+  position: absolute;
+  left: 40%;
+  width: 40%;
+  top: 53%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.gym_eye_apple.right{
+  left: 33%;
+}
+.left_to_right .gym_eye_apple{
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.animate.left_to_right .gym_eye_apple{
+  -webkit-animation: left_to_right 2s infinite alternate ease-in-out;
+          animation: left_to_right 2s infinite alternate ease-in-out;
+}
+.animate.left_to_right .gym_eye_apple.right{
+  -webkit-animation: left_to_right_r 2s infinite alternate ease-in-out;
+          animation: left_to_right_r 2s infinite alternate ease-in-out;
+}
+.up_down .gym_eye_apple{
+  top: 32%;
+  left: 55%;
+}
+.up_down .gym_eye_apple.right{
+  left: 45%;
+  top: 32%;
+}
+.animate.up_down .gym_eye_apple{
+  -webkit-animation: up_down 2s infinite alternate ease-in-out;
+          animation: up_down 2s infinite alternate ease-in-out;
+}
+.animate.up_down .gym_eye_apple.right{
+  left: 45%;
+  -webkit-animation: up_down 2s infinite alternate ease-in-out;
+          animation: up_down 2s infinite alternate ease-in-out;
+}
+.eye_rounds .gym_eye_apple{
+  left: 55%;
+  top: 32%;
+}
+.eye_rounds .gym_eye_apple.right{
+  left: 45%;
+  top: 32%;
+}
+.animate.eye_rounds .eye_apple_holder{
+  left: 0;
+  -webkit-animation: left_to_right_rounds 4s infinite;
+          animation: left_to_right_rounds 4s infinite;
+}
+.animate.eye_rounds .gym_eye_apple{
+  left: 55%;
+  -webkit-animation: up_down_rounds 4s  infinite ease-in-out;
+          animation: up_down_rounds 4s  infinite ease-in-out;
+}
+.animate.eye_rounds .gym_eye_apple.right{
+  left: 45%;
+  -webkit-animation: up_down_rounds 4s  infinite ease-in-out;
+          animation: up_down_rounds 4s  infinite ease-in-out;
+}
+.open_close .gym_eye_sclera{
+  opacity: 0;
+}
+.gym_eye_opened, .gym_eye_closed{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+.gym_eye_closed{
+  opacity: 0;
+}
+.gym_eye_opened.right, .gym_eye_closed.right{
+  -webkit-transform: translateY(-50%) scale(-1, 1);
+          transform: translateY(-50%) scale(-1, 1);
+}
+.animate .gym_eye_opened{
+  opacity: 1;
+  -webkit-animation: fade 3s 1.5s infinite ease-in-out;
+          animation: fade 3s 1.5s infinite ease-in-out;
+}
+.animate .gym_eye_closed{
+  opacity: 0;
+  -webkit-animation: fade 3s infinite ease-in-out;
+          animation: fade 3s infinite ease-in-out;
+}
+.eye_nose .gym_eye_apple{
+  left: 55%;
+  top: 53%;
+}
+.eye_nose .gym_eye_apple.right{
+  left: 45%;
+  top: 53%;
+}
+.animate.eye_nose .gym_eye_apple{
+  left: 55%;
+  -webkit-animation: center_nose 2s infinite alternate ease-in-out;
+          animation: center_nose 2s infinite alternate ease-in-out;
+}
+.animate.eye_nose .gym_eye_apple.right{
+  left: 45%;
+  -webkit-animation: center_nose_r 2s infinite alternate ease-in-out;
+          animation: center_nose_r 2s infinite alternate ease-in-out;
+}
+.eye_skew .gym_eye_apple{
+  left: 73%;
+  top: 40%;
+}
+.eye_skew .gym_eye_apple.right{
+  left: 65%;
+  top: 40%;
+}
+.animate.eye_skew .gym_eye_apple{
+  -webkit-animation: eye_skew_anim 7s infinite ease-in-out;
+          animation: eye_skew_anim 7s infinite ease-in-out;
+}
+.animate.eye_skew .gym_eye_apple.right{
+  -webkit-animation: eye_skew_anim_r 7s infinite ease-in-out;
+          animation: eye_skew_anim_r 7s infinite ease-in-out;
+}
+.gym_last_eye{
+  position: relative;
+  right: 20px;
+}
+.gym_clock{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+}
+.gym_eye_holder.last{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gym_plane{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 250px;
+  top: 0;
+}
+.gym_clock:before,
+.gym_plane:before{
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40px) rotate(21deg);
+          transform: translateX(-40px) rotate(21deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  height: 0;
+  width: 300px;
+  border-bottom: dashed 3px #03346B;
+  opacity: 0;
+}
+.gym_plane:before{
+  width: 500px;
+  -webkit-transform: translateX(-40px) rotate(-11deg);
+          transform: translateX(-40px) rotate(-11deg);
+  border-bottom: dashed 3px #F07E20;
+}
+.gym_plane img, .gym_clock img{
+  position: relative;z-index: 3;
+  opacity: 0;
+}
+.gym_eyes_grid.last>div{
+  position: relative;
+}
+.gym_eyes_grid.last>div:first-child{
+  z-index: 44;
+}
+.animate .gym_clock img{
+  -webkit-animation: clock_anim 6s infinite;
+          animation: clock_anim 6s infinite;
+}
+.animate .gym_plane img{
+  -webkit-animation: plane_anim 6s infinite;
+          animation: plane_anim 6s infinite;
+}
+.animate .gym_clock:before{
+  -webkit-animation: blue_line_anim 6s infinite;
+          animation: blue_line_anim 6s infinite;
+}
+.animate .gym_plane:before{
+  -webkit-animation: orange_line_anim 6s infinite;
+          animation: orange_line_anim 6s infinite;
+}
+@-webkit-keyframes left_to_right{
+  0%{
+    left: 40%;
+  }
+  100%{
+    left: 67%;
+  }
+}
+@keyframes left_to_right{
+  0%{
+    left: 40%;
+  }
+  100%{
+    left: 67%;
+  }
+}
+@-webkit-keyframes left_to_right_r{
+  0%{
+    left: 33%;
+  }
+  100%{
+    left: 60%;
+  }
+}
+@keyframes left_to_right_r{
+  0%{
+    left: 33%;
+  }
+  100%{
+    left: 60%;
+  }
+}
+@-webkit-keyframes up_down{
+  0%{
+    top: 32%;
+  }
+  100%{
+    top: 69%;
+  }
+}
+@keyframes up_down{
+  0%{
+    top: 32%;
+  }
+  100%{
+    top: 69%;
+  }
+}
+@-webkit-keyframes left_to_right_rounds{
+  75%, 0%{
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+  15%{
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  }
+  25%{
+    left: 17%; 
+    -webkit-animation-timing-function: ease-in-out; 
+            animation-timing-function: ease-in-out; 
+  }
+  75%{
+    left: -17%;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+}
+@keyframes left_to_right_rounds{
+  75%, 0%{
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+  15%{
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  }
+  25%{
+    left: 17%; 
+    -webkit-animation-timing-function: ease-in-out; 
+            animation-timing-function: ease-in-out; 
+  }
+  75%{
+    left: -17%;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+}
+@-webkit-keyframes up_down_rounds{
+  /*0%, 50%, 100%{
+    top: 53%;
+  }*/
+  0%, 100%{
+    top: 32%;
+  }
+  50%{
+    top: 69%;
+  }
+}
+@keyframes up_down_rounds{
+  /*0%, 50%, 100%{
+    top: 53%;
+  }*/
+  0%, 100%{
+    top: 32%;
+  }
+  50%{
+    top: 69%;
+  }
+}
+@-webkit-keyframes fade{
+  0%, 60%, 100%{
+    opacity: 1;
+  }
+  10%,50%{
+    opacity: 0;
+  }
+}
+@keyframes fade{
+  0%, 60%, 100%{
+    opacity: 1;
+  }
+  10%,50%{
+    opacity: 0;
+  }
+}
+@-webkit-keyframes center_nose{
+  0%{
+    left: 55%;
+    top: 53%;
+  }
+  100%{
+    left: 70%;
+    top: 58%;
+  }
+}
+@keyframes center_nose{
+  0%{
+    left: 55%;
+    top: 53%;
+  }
+  100%{
+    left: 70%;
+    top: 58%;
+  }
+}
+@-webkit-keyframes center_nose_r{
+  0%{
+    left: 45%;
+    top: 53%;
+  }
+  100%{
+    left: 30%;
+    top: 58%;
+  }
+}
+@keyframes center_nose_r{
+  0%{
+    left: 45%;
+    top: 53%;
+  }
+  100%{
+    left: 30%;
+    top: 58%;
+  }
+}
+@-webkit-keyframes eye_skew_anim{
+  0%,100%{
+    left: 73%;
+    top: 40%;
+  }
+  25%{
+    left: 73%;
+    top: 60%;
+  }
+  50%{
+    left: 35%;
+    top: 40%;
+  }
+  75%{
+    left: 35%;
+    top: 60%;
+  }
+}
+@keyframes eye_skew_anim{
+  0%,100%{
+    left: 73%;
+    top: 40%;
+  }
+  25%{
+    left: 73%;
+    top: 60%;
+  }
+  50%{
+    left: 35%;
+    top: 40%;
+  }
+  75%{
+    left: 35%;
+    top: 60%;
+  }
+}
+@-webkit-keyframes eye_skew_anim_r{
+  0%,100%{
+    left: 65%;
+    top: 40%;
+  }
+  25%{
+    left: 65%;
+    top: 60%;
+  }
+  50%{
+    left: 27%;
+    top: 40%;
+  }
+  75%{
+    left: 27%;
+    top: 60%;
+  }
+}
+@keyframes eye_skew_anim_r{
+  0%,100%{
+    left: 65%;
+    top: 40%;
+  }
+  25%{
+    left: 65%;
+    top: 60%;
+  }
+  50%{
+    left: 27%;
+    top: 40%;
+  }
+  75%{
+    left: 27%;
+    top: 60%;
+  }
+}
+@-webkit-keyframes orange_line_anim{
+  10%, 35%{
+    opacity: 1;
+  }
+  0%, 50%, 100%{
+    opacity: 0;
+  }
+}
+@keyframes orange_line_anim{
+  10%, 35%{
+    opacity: 1;
+  }
+  0%, 50%, 100%{
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blue_line_anim{
+  60%, 85%{
+    opacity: 1;
+  }
+  0%, 50%, 100%{
+    opacity: 0;
+  }
+}
+@keyframes blue_line_anim{
+  60%, 85%{
+    opacity: 1;
+  }
+  0%, 50%, 100%{
+    opacity: 0;
+  }
+}
+@-webkit-keyframes plane_anim{
+  25%, 35%{
+    opacity: 1;
+  }
+  0%,15%, 50%, 100%{
+    opacity: 0;
+  }
+}
+@keyframes plane_anim{
+  25%, 35%{
+    opacity: 1;
+  }
+  0%,15%, 50%, 100%{
+    opacity: 0;
+  }
+}
+@-webkit-keyframes clock_anim{
+  75%, 85%{
+    opacity: 1;
+  }
+  0%, 50%,65%, 100%{
+    opacity: 0;
+  }
+}
+@keyframes clock_anim{
+  75%, 85%{
+    opacity: 1;
+  }
+  0%, 50%,65%, 100%{
+    opacity: 0;
+  }
+}
+@media all and (max-width: 1200px){
+    .gym_head_header {
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+}
+@media all and (max-width: 990px){
+  .gym_eye_number{
+    font-size: 111px;
+    left: 50px;
+  }
+  .gym_eye_number.right{
+    right: 50px;
+  }
+  .gym_section{
+    padding-bottom: 80px;
+  }
+  .gym_plane{
+    left: 200px;
+  }
+  .gym_last_eye{
+    max-width: calc(100% - 25px);
+    right: 10px;
+  }
+}
+@media all and (max-width: 767px){
+  .gym_head_bg{
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+  }
+  .container{
+    max-width: calc(100% - 30px);
+  }
+  .gym_head_header{
+    color: #00547F;
+    width: calc(100% - 30px);
+    position: relative;
+    left: 15px;
+    font-size: 30px;
+    top: 0;
+    -webkit-transform: unset;
+            transform: unset;
+    margin-top: 25px;
+    text-align: center;
+  }
+  .gym_plane{
+    height: 50px;
+    width: 50px;
+    left: 50%;
+  }
+  .gym_first_text{
+    padding: 0;
+  }
+  .gym_section{
+    font-size: 24px;
+  }
+  .gym_clock{
+    width: 50px;
+    height: 50px;
+    left: 10%;
+  }
+  .gym_plane:before{
+    width: 50vw;
+    -webkit-transform: translateX(-20px) rotate(-16deg);
+            transform: translateX(-20px) rotate(-16deg);
+    border-bottom: dashed 2px #F07E20;
+  }
+  .gym_clock:before{
+    width: 20vw;
+    -webkit-transform: translateX(-20px) rotate(24deg);
+            transform: translateX(-20px) rotate(24deg);
+    border-bottom: dashed 2px #03346B;
+  }
+  .gym_eyes_grid{
+    grid-gap: 20px;
+  }
+  .gym_eye_number{
+    font-size: 111px;
+    left: 15px;
+  }
+  .gym_eye_number.right{
+    right: 15px;
+  }
+  .gym_last_eye{
+    max-width: 100%;
+  }
+  
+}
+
+
+
+

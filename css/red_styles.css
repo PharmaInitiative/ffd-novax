@@ -1,0 +1,126 @@
+.red_head_section, .red_head_holder{
+  position: relative;
+  
+}
+.red_head_section{
+  margin-top: 50px;
+}
+.red_head_bg{
+  width: 100%;
+  height: 420px;
+  /*max-height: 420px;*/
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 68%;
+     object-position: 20% 68%;
+}
+.red_head_header{
+  position: absolute;
+  left: 46%;
+  width: calc(50% - 50px);
+  top: 50%;
+  -webkit-transform: translateY(-41%);
+          transform: translateY(-41%);
+  color: #FFF;
+  font-size: 48px;
+}
+.red_text_container{
+  position: relative;
+  margin: 0 auto;
+  max-width: 850px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.red_header{
+  color: #00547F;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.red_section1, .red_section3 {
+  position: relative;
+  padding: 25px 0;
+}
+.red_section2, .red_section4{
+  position: relative;
+  padding: 25px 0;
+  background: #FDF2E9;
+}
+.red_text_container ul{
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.red_text_container ul>li:before{
+  content: "\2022";
+  color: #F07E20;
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: .1;
+  display: inline-block; 
+  padding-right: .3em;
+}
+.red_text_image{
+  position: relative;
+  width: 300px;
+}
+.red_text_image.left{
+  float: left;
+  margin-right: 15px;
+}
+.red_text_image.right{
+  float: right;
+  margin-left: 15px;
+}
+.red_text_image.mobile{
+  display: none;
+}
+main a{
+  color: #F07E20!important;
+  font-weight: bold;
+}
+.page_bottom_section a{
+  color: inherit!important;
+  font-weight: inherit!important;
+}
+@media all and (max-width: 1200px){
+    .red_head_header {
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+}
+@media all and (max-width: 990px){
+
+}
+@media all and (max-width: 767px){
+  .red_head_bg{
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+  }
+  .red_head_header{
+    color: #00547F;
+    width: calc(100% - 30px);
+    position: relative;
+    left: 15px;
+    font-size: 30px;
+    top: 0;
+    -webkit-transform: unset;
+            transform: unset;
+    margin-top: 25px;
+  }
+  .red_text_image{
+    display: none;
+  }
+  .red_text_image.mobile{
+    display: block;
+    float: unset;
+    width: 100%;
+    margin: 0;
+  }
+  .red_text_container{
+    font-size: 16px;
+  }
+}

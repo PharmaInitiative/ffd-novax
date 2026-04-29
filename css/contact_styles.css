@@ -1,0 +1,111 @@
+.contact_section{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  min-height: calc(var(--vh, 1vh) * 100);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact_map_holder iframe{
+  position: relative;
+}
+.contact_info_holder{
+  padding-right: 100px;
+}
+.contact_info_holder .container{
+  display: inline-block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  text-align: left;
+}
+.contact_logo{
+  position: relative;
+  max-width: 100%;
+  width: 450x;
+  margin-bottom: 30px;
+}
+.contacts_content{
+  position: relative;
+  display: grid;
+  color: #1b75bb;
+  font-weight: 300;
+  font-size: 22px;
+  grid-gap: 10px;
+}
+.contacts_header{
+  font-weight: 400;
+  font-size: 26px;
+}
+.contact_map_holder{
+  position: relative;
+  height: calc(100% - 50px);
+  padding-top: 50px;
+}
+.contacts_mail_grid, .contacts_phone_grid{
+  position: relative;
+  display: grid;
+  grid-template-columns: 25px auto;
+  grid-gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact_info_holder{
+  text-align: center;
+}
+.page_bottom_section{
+  margin-top: 0;
+}
+@media all and (max-width: 1200px){
+    .contact_section{
+      grid-gap: 50px;
+    }
+}
+@media all and (max-width: 990px){
+    .contact_section{
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-gap: 25px;
+    }
+    .contact_info_holder{
+      grid-row: 1;
+      text-align: center;
+      padding-top: 50px;
+      padding-right: 0;
+    }
+    .contacts_content{
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding-right: 0;
+    }
+    .contacts_content a{
+      justify-self: center;
+    }
+    .contacts_phone_grid, .contacts_mail_grid{
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
+      white-space: nowrap;
+    }
+    .contact_info_holder .container{
+      display: block;
+      width: unset;
+      white-space: unset;
+      text-align: center;
+    }
+}
+@media all and (max-width: 767px){
+  .contacts_header {
+    font-size: 24px;
+  }
+  .contacts_content{
+    font-size: 16px;
+    grid-gap: 5px
+  }
+
+}
