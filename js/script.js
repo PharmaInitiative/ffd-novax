@@ -62,6 +62,9 @@ function init() {
       case "practical_advices":
         init_advices();
         break;
+      case "videos":
+        init_videos();
+        break;
     }
     // referrer_url = 'slyoza';
 }
@@ -287,4 +290,79 @@ function init_advices(){
     }
     prevScrollpos = window.pageYOffset;
   })
+}
+
+/* =====================================================================
+   Videos listing — client-side pagination (10 items per page)
+   Brand-styled page switcher, built on the fly. Runs on first load and
+   on every Swup transition into the videos page (via init() dispatcher).
+   ===================================================================== */
+function init_videos() {
+  var $holder = $('.video_previews_holder');
+  if (!$holder.length) return;
+
+  var perPage = 10;
+  var $items = $holder.children('.video_preview');
+  var total = $items.length;
+
+  // Nothing to paginate
+  if (total <= perPage) return;
+
+  var pageCount = Math.ceil(total / perPage);
+  var current = 1;
+
+  // Rebuild cleanly if a control already exists (defensive on re-init)
+  var $container = $holder.parent();
+  $container.find('.videos_pagination').remove();
+
+  var $nav = $('<div class="videos_pagination" role="navigation" aria-label="Навігація сторінками відео"></div>');
+  var $prev = $('<button type="button" class="videos_pagination__btn videos_pagination__btn--nav" data-nav="prev" aria-label="Попередня сторінка">&#8249;</button>');
+  var $next = $('<button type="button" class="videos_pagination__btn videos_pagination__btn--nav" data-nav="next" aria-label="Наступна сторінка">&#8250;</button>');
+
+  $nav.append($prev);
+  for (var i = 1; i <= pageCount; i++) {
+    $nav.append('<button type="button" class="videos_pagination__btn" data-page="' + i + '" aria-label="Сторінка ' + i + '">' + i + '</button>');
+  }
+  $nav.append($next);
+  $holder.after($nav);
+
+  function render() {
+    $items.each(function (idx) {
+      var onPage = (Math.floor(idx / perPage) + 1) === current;
+      var $item = $(this).css('display', onPage ? '' : 'none');
+      var $divider = $item.next('.videos_preview_divider');
+      if ($divider.length) $divider.css('display', onPage ? '' : 'none');
+    });
+    $nav.find('.videos_pagination__btn[data-page]').each(function () {
+      var active = parseInt($(this).attr('data-page'), 10) === current;
+      $(this).toggleClass('videos_pagination__btn--active', active);
+      if (active) { $(this).attr('aria-current', 'page'); }
+      else { $(this).removeAttr('aria-current'); }
+    });
+    $prev.prop('disabled', current === 1)
+         .toggleClass('videos_pagination__btn--disabled', current === 1);
+    $next.prop('disabled', current === pageCount)
+         .toggleClass('videos_pagination__btn--disabled', current === pageCount);
+  }
+
+  function goTo(page, scroll) {
+    page = Math.max(1, Math.min(pageCount, page));
+    current = page;
+    render();
+    if (scroll) {
+      var $target = $('.video_previews_section');
+      if ($target.length) {
+        $('body, html').animate({ scrollTop: $target.offset().top - 80 }, 400);
+      }
+    }
+  }
+
+  $nav.on('click', '.videos_pagination__btn', function () {
+    var $b = $(this);
+    if ($b.attr('data-nav') === 'prev') { goTo(current - 1, true); }
+    else if ($b.attr('data-nav') === 'next') { goTo(current + 1, true); }
+    else { goTo(parseInt($b.attr('data-page'), 10), true); }
+  });
+
+  render(); // show page 1, no scroll
 }

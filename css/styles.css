@@ -964,7 +964,7 @@ html.is-animating .transition-fade {
     padding: 0 5px;
   }
   .nav_menu_unit:hover .nav_subMenu_holder {
-    max-height: 350px;
+    max-height: 1000px;
     opacity: 1;
     margin-top: 10px;
     padding: 5px;
